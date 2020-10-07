@@ -4,13 +4,15 @@ import './index.css';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Register from './components/jobSeekerRegister'
+import Register from './components/jobSeekerRegister';
+import AdminPostJob from './components/adminPostJob'
 
 const Routing = (
   <Router>
     <div>
       <Route path="/jobSeeker/Register" component={Register} />
       <Route path="/" component={App} />
+      <Route path="/admin/postJobs" component={AdminPostJob} />
       {/* <Route path="/login" component={Contact} /> */}
     </div>
   </Router>

@@ -99,7 +99,7 @@ const EmployeeForm = (props) => {
                   }
                 ],
                 })(
-                  <Input placeholder="Months" onChange={e => props.setData( 'current_experience', e.target.value)}/>,
+                  <Input placeholder="Months" type="number" onChange={e => props.setData( 'current_experience', e.target.value)}/>,
                 )}
               </Form.Item>
               </Col>

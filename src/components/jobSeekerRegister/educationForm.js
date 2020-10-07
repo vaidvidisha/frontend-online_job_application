@@ -38,21 +38,6 @@ const EducationForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.form.validateFields((err, values) => {
-
-      // if (!err) {
-      //     const data = {
-      //       college: values.college || null,
-      //       passing_year: values.passing_year || null,
-      //       graduated: values.graduated || null,
-      //       graduated_school: values.graduated_school ||null,
-      //       graduated_year: values.graduated_year || null,
-      //       skills: values.skills || null,
-      //       certification: values.certification || null
-      //     };
-      //     console.log(data);
-      //     // props.submit(data);
-      // }
-      console.log(props.data);
       fetch('http://localhost:3600/api/job-seeker', {
         method: 'POST',
         headers: {

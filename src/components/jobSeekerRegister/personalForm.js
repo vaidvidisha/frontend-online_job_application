@@ -11,14 +11,17 @@ const PersonalForm = (props) => {
   const [country ,setCountry] = useState(''); 
   const [state ,setRegion] = useState('');
 
-  const selectRegion = async (val) =>{
+  const selectRegion = (val) =>{
     setRegion(val);
+    console.log("val",val);
     props.setData( 'state', val);
+    console.log(props.data);
   }
 
-  const selectCountry = async (val) =>{
+  const selectCountry = (val) =>{
     setCountry(val);
     props.setData( 'country', val);
+    console.log(props.data);
   }
 
   // console.log(props.data);
@@ -77,7 +80,7 @@ const PersonalForm = (props) => {
     });
   }
 
-  const checkPhone = (rule, value, callback) => {
+  const checkPhone = (value, callback) => {
     const regex = /^\d{10}$/;
     if (value && !regex.test(value)) {
       callback("Phone number should be 10 digit number!");
